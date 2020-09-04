@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
+const MONGO_URL = "mongodb+srv://user:PQk8I6inDAJjkQza@cluster0.ab4wz.mongodb.net/fileshare?retryWrites=true&w=majority"
 
 function connectDB() {
-    mongoose.connect(process.env.MONGO_URL, {
+    mongoose.connect(MONGO_URL, {
         useNewUrlParser: true,
         useCreateIndex: true,
         useUnifiedTopology: true,

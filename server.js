@@ -16,17 +16,19 @@ app.get("/", (req, res) => {
 })
 
 
-app.post("/show", async(req, res) => {
-    try {
-        const file = test({
-            filename: "yes",
-        })
-        const response = await file.save()
-        return res.json({ "done": "DONE" })
+app.get("/show", async(req, res) => {
+    // try {
+    //     const file = test({
+    //         filename: "yes",
+    //     })
+    //     const response = await file.save()
+    //     return res.json({ "done": "DONE" })
 
-    } catch (error) {
+    // } catch (error) {
 
-    }
+    // } 
+
+    res.json({ "data": "DATA" })
 
 })
 

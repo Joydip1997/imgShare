@@ -16,11 +16,12 @@ app.get("/", (req, res) => {
 })
 
 
-app.get("/show", async(req, res) => {
+app.post("/show", async(req, res) => {
     try {
         const file = test({
-            filename: "yes",
+            filename: "data",
         })
+        res.json({ "data": "DATA" })
         const response = await file.save()
 
 
@@ -28,7 +29,7 @@ app.get("/show", async(req, res) => {
 
     }
 
-    res.json({ "data": "DATA" })
+
 
 })
 

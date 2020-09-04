@@ -17,16 +17,16 @@ app.get("/", (req, res) => {
 
 
 app.get("/show", async(req, res) => {
-    // try {
-    //     const file = test({
-    //         filename: "yes",
-    //     })
-    //     const response = await file.save()
-    //     return res.json({ "done": "DONE" })
+    try {
+        const file = test({
+            filename: "yes",
+        })
+        const response = await file.save()
 
-    // } catch (error) {
 
-    // } 
+    } catch (error) {
+
+    }
 
     res.json({ "data": "DATA" })
 
